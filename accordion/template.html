@@ -10,7 +10,11 @@ style="{{ $.Style }}"
 style="{{ .Style }}"
 {{ end }}
   >{{ .Title }}</div>
-  <div class="collapse-content">
+  <div class="collapse-content {{ $.ContentClasses }}" 
+{{ if ne $.ContentStyle "" }} 
+style="{{ $.ContentStyle }}"
+{{ end }}
+  >
     {{ range .Components }}
     {{ .Render }}
     {{ end }}

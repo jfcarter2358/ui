@@ -3,8 +3,9 @@ package accordion
 import (
 	"bytes"
 	_ "embed"
-	"github.com/jfcarter2358/ui"
 	"text/template"
+
+	"github.com/jfcarter2358/ui"
 )
 
 //go:embed template.html
@@ -24,16 +25,18 @@ type AccordionItem struct {
 }
 
 type Accordion struct {
-	ID        string
-	Items     []AccordionItem
-	Classes   string
-	Style     string
-	HXGet     string
-	HXPost    string
-	HXPut     string
-	HXTarget  string
-	HXSwap    string
-	HXTrigger string
+	ID             string
+	Items          []AccordionItem
+	Classes        string
+	ContentClasses string
+	ContentStyle   string
+	Style          string
+	HXGet          string
+	HXPost         string
+	HXPut          string
+	HXTarget       string
+	HXSwap         string
+	HXTrigger      string
 }
 
 var Template *template.Template
